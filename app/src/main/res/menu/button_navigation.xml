@@ -4,21 +4,21 @@
     <item
         android:id="@+id/icon_home"
         android:title="Home"
-        android:icon="@drawable/ic_home"/>
+        android:icon="@mipmap/ic_store"/>
     <item
         android:id="@+id/icon_explore"
         android:title="Explore"
-        android:icon="@drawable/ic_explore"/>
+        android:icon="@mipmap/ic_explore_gropedia"/>
     <item
         android:id="@+id/icon_payment"
-        android:title="Payment"
-        android:icon="@drawable/ic_payments"/>
+        android:title="Transaction"
+        android:icon="@mipmap/ic_transaction"/>
     <item
         android:id="@+id/icon_notification"
-        android:title="Notife"
-        android:icon="@drawable/ic_notifications"/>
+        android:title="Notification"
+        android:icon="@mipmap/ic_notif_gropdeia"/>
     <item
         android:id="@+id/icon_profile"
         android:title="Profile"
-        android:icon="@drawable/ic_profile"/>
+        android:icon="@mipmap/ic_profile_gropedia"/>
 </menu>
