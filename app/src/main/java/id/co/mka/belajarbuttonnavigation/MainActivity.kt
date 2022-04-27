@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import id.co.mka.belajarbuttonnavigation.data.entity.bestSellerEntity
 import id.co.mka.belajarbuttonnavigation.data.entity.kategoryEntity
 import id.co.mka.belajarbuttonnavigation.data.retrofit.RetrofitBuilder
 import id.co.mka.belajarbuttonnavigation.databinding.ActivityMainBinding
@@ -27,6 +28,15 @@ class MainActivity : AppCompatActivity() {
                 .observe(this@MainActivity) {
 
                     val adapter = cardViewAdapter(it as ArrayList<kategoryEntity>)
+                    KategoryRecyclerView.adapter = adapter
+                    KategoryRecyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
+                }
+        }
+        with(binding){
+            viewModel.getBestseller(RetrofitBuilder.getRetrofit(this@MainActivity.applicationContext))
+                .observe(this@MainActivity) {
+
+                    val adapter = cardViewAdapter(it as ArrayList<bestSellerEntity>)
                     KategoryRecyclerView.adapter = adapter
                     KategoryRecyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
                 }

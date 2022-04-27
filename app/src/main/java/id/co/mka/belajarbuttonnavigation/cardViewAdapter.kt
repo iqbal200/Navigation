@@ -32,4 +32,6 @@ class cardViewAdapter (
 
     override fun getItemCount(): Int = listCategory.size
 
+
+
 }
