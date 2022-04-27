@@ -32,15 +32,7 @@ class MainActivity : AppCompatActivity() {
                     KategoryRecyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
                 }
         }
-        with(binding){
-            viewModel.getBestseller(RetrofitBuilder.getRetrofit(this@MainActivity.applicationContext))
-                .observe(this@MainActivity) {
 
-                    val adapter = cardViewAdapter(it as ArrayList<bestSellerEntity>)
-                    KategoryRecyclerView.adapter = adapter
-                    KategoryRecyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
-                }
-        }
 
     }
 }
