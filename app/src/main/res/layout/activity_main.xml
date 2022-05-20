@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
   <RelativeLayout
@@ -16,6 +17,7 @@
           android:layout_marginLeft="10dp"
           android:layout_marginTop="20dp"
           android:layout_marginRight="10dp"
+          android:layout_marginStart="16dp"
           android:background="@drawable/bg_search"
           android:elevation="8dp"/>
       <TextView
@@ -26,17 +28,28 @@
           android:textColor="@color/black"
           android:layout_marginTop="80dp"
           android:layout_marginLeft="10dp"
+          android:layout_marginStart="16dp"
           android:textStyle="bold"
           android:textSize="18dp" />
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
 
-      <androidx.recyclerview.widget.RecyclerView
-          android:id="@+id/KategoryRecyclerView"
-          android:layout_width="wrap_content"
-          android:layout_height="213dp"
-          android:layout_marginBottom="408dp"
-          android:layout_marginLeft="10dp"
-          android:layout_marginTop="100dp"
-          tools:listitem="@layout/item_kategori" />
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/KategoryRecyclerView"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="408dp"
+              android:layout_marginLeft="10dp"
+              android:layout_marginStart="16dp"
+              android:layout_marginTop="100dp"
+              tools:listitem="@layout/item_kategori" />
+      </LinearLayout>
+
+
+
+
 
       <TextView
           android:id="@+id/tv_bestSeller"
@@ -46,6 +59,7 @@
           android:layout_marginLeft="10dp"
           android:text="Best Seller"
           android:textSize="18dp"
+          android:layout_marginStart="16dp"
           android:textColor="@color/black"
           android:textStyle="bold"/>
 
@@ -56,6 +70,7 @@
           android:layout_height="213dp"
           android:layout_marginBottom="116dp"
           android:layout_marginTop="340dp"
+          android:layout_marginStart="16dp"
           android:layout_marginLeft="10dp"
           tools:listitem="@layout/item_bestseller" />
 
@@ -72,4 +87,4 @@
 
 
 
-</ScrollView>
+</LinearLayout>
